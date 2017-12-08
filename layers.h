@@ -1,5 +1,7 @@
 #include "Halide.h"
 using namespace Halide;
+#include "halide_image.h"
+using namespace Halide::Tools;
 class Layer {
     public:
         Layer(Layer* in) {
@@ -448,7 +450,7 @@ class Convolutional: public Layer {
                 // be incompatible with some schedules. Have to investigate
                 // this more closely.
                 //f_in_bound.compute_at(forward, n);
-                f_in_bound.compute_at(forward, z_t);
+                //f_in_bound.compute_at(forward, z_t);
             }
 
         }

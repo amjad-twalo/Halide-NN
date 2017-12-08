@@ -14,6 +14,10 @@
 
 #include "Halide.h"
 using namespace Halide;
+
+#include "halide_image.h"
+using namespace Halide::Tools;
+
 void load_batch(int batch_size, int crop_w, int crop_h,
                 Image<float> &data, Image<int> &labels,
                 db::Cursor* cur);
